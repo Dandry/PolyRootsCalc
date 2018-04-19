@@ -7,12 +7,13 @@
 using namespace std;
 using namespace System;
 
-CSecantMethod::CSecantMethod(int initialApproximation, int maxIterations, int tolerance) : CRootFindingAlgorithm(initialApproximation, maxIterations, tolerance)
+CSecantMethod::CSecantMethod(double initialApproximation, int maxIterations, double tolerance) 
+	: CRootFindingAlgorithm(initialApproximation, maxIterations, tolerance) 
 {
+	throw exception("Algorytm metody siecznych nie zosta³ zaimplementowany!");
+};
 
-}
-
-list<double> CSecantMethod::calculateRoot(CPolynomial polynomial)
+CResult<double> CSecantMethod::calculateRoot(CPolynomial* polynomial)
 {
-
+	throw exception("Algorytm metody siecznych nie zosta³ zaimplementowany!");
 }

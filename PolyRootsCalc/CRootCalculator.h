@@ -2,33 +2,29 @@
 
 #include "stdafx.h"
 #include "CPolynomial.h"
+#include "MethodType.h"
+#include "CRootFindingAlgorithm.h"
 
 using namespace std;
 using namespace System;
 
 class CRootCalculator
 {
-	private:
-		int initialApproximation;
-		int maxIterations;
-		int tolerance;
-
-		list<CPolynomial> *polynomials;
-		list<list<double>> *polynomialsRoots;
-
-		list<CPolynomial> parsePolynomials(String^ input);
-		list<list<double>> calculateRoots(list<CPolynomial> polynomials);
-		string getCalculationSummary(list<list<double>> polynomialsRoots);
-		double getPolynomialMinRoot(list<double> polynomialRoots);
-		double getPolynomialMaxRoot(list<double> polynomialRoots);
-
 	public:
-		CRootCalculator();
+		CRootCalculator(double _initApprox, int _maxIter, double _tol, int _decPlac);
 		~CRootCalculator();
 
-		void setInitialApproximation();
-		void setMaxIterations();
-		void setTolerance();
+		void setInitialApproximation(double _val);
+		void setMaxIterations(int _val);
+		void setTolerance(double _val);
 
-		string calculateRoots(String^ input);
+		string calculateRoots(list<CPolynomial>* _pols, methodType _method);
+
+	private:
+		double initialApproximation;
+		int maxIterations;
+		double tolerance;
+		int toleranceDecimalPlaces;
+
+		CRootFindingAlgorithm* CRootCalculator::getAlgorithm(methodType _method);
 };

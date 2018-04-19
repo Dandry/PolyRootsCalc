@@ -7,7 +7,7 @@
 using namespace std;
 using namespace System;
 
-CRootFindingAlgorithm::CRootFindingAlgorithm(int initialApproximation, int maxIterations, int tolerance)
+CRootFindingAlgorithm::CRootFindingAlgorithm(double initialApproximation, int maxIterations, double tolerance)
 {
 	this->initialApproximation = initialApproximation;
 	this->maxIterations = maxIterations;

@@ -6,7 +6,7 @@
 
 class CSecantMethod : public CRootFindingAlgorithm
 {
-public:
-	CSecantMethod(int initialApproximation, int maxIterations, int tolerance) : CRootFindingAlgorithm(initialApproximation, maxIterations, tolerance) {};
-	list<double>calculateRoot(CPolynomial polynomial);
+	public:
+		CSecantMethod::CSecantMethod(double initialApproximation, int maxIterations, double tolerance);
+		CResult<double> calculateRoot(CPolynomial* polynomial);
 };

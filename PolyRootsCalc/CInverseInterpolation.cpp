@@ -7,12 +7,13 @@
 using namespace std;
 using namespace System;
 
-CInverseInterpolation::CInverseInterpolation(int initialApproximation, int maxIterations, int tolerance) : CRootFindingAlgorithm(initialApproximation, maxIterations, tolerance)
+CInverseInterpolation::CInverseInterpolation(double initialApproximation, int maxIterations, double tolerance) 
+	: CRootFindingAlgorithm(initialApproximation, maxIterations, tolerance) 
 {
+	throw exception("Algorytm metody odwrotnej interpolacji kwadratowej nie zosta³ zaimplementowany!");
+};
 
-}
-
-list<double> CInverseInterpolation::calculateRoot(CPolynomial polynomial)
+CResult<double> CInverseInterpolation::calculateRoot(CPolynomial* polynomial)
 {
-
+	throw exception("Algorytm metody odwrotnej interpolacji kwadratowej nie zosta³ zaimplementowany!");
 }

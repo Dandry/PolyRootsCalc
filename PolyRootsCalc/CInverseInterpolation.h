@@ -7,6 +7,6 @@
 class CInverseInterpolation : public CRootFindingAlgorithm
 {
 	public:
-		CInverseInterpolation(int initialApproximation, int maxIterations, int tolerance) : CRootFindingAlgorithm(initialApproximation, maxIterations, tolerance) {};
-		list<double>calculateRoot(CPolynomial polynomial);
+		CInverseInterpolation::CInverseInterpolation(double initialApproximation, int maxIterations, double tolerance);
+		CResult<double> calculateRoot(CPolynomial* polynomial);
 };

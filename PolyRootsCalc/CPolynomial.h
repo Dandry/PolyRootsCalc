@@ -2,20 +2,23 @@
 
 #include "stdafx.h"
 #include "CPolynomial.h"
+#include "CPolyTerm.h"
 
 using namespace std;
 
 class CPolynomial
 {
 	public:
-		list<double> *coefficients;
+		list<CPolyTerm>* polyTerms;
 
-		CPolynomial();
+		CPolynomial(list<CPolyTerm>* _terms);
 		~CPolynomial();
 
 		int getDegree();
 		double getHighestTerm();
-		double getAbsoluteTerm();
-		CPolynomial calculateDerivative();
-		CPolynomial divideByBinomial();
+		double getConstant();
+		double evaluate(double _val);
+		CPolynomial* getDerivative();
+
+		CPolynomial* operator / (const double _root);
 };

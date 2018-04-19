@@ -2,18 +2,18 @@
 
 #include "stdafx.h"
 #include "CPolynomial.h"
+#include "CResult.h"
 
 using namespace std;
 
 class CRootFindingAlgorithm
 {
 	public:
-		CRootFindingAlgorithm(int initialApproximation, int maxIterations, int tolerance);
-		virtual ~CRootFindingAlgorithm() = 0;
-		virtual list<double>calculateRoot(CPolynomial polynomial) = 0;
+		CRootFindingAlgorithm(double initialApproximation, int maxIterations, double tolerance);
+		virtual CResult<double> calculateRoot(CPolynomial* polynomial) = 0;
 
 	protected:
-		int initialApproximation;
+		double initialApproximation;
 		int maxIterations;
-		int tolerance;
+		double tolerance;
 };

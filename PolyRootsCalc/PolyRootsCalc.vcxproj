@@ -105,6 +105,8 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -136,14 +138,20 @@
     <ClCompile Include="CFileManager.cpp" />
     <ClCompile Include="CInverseInterpolation.cpp" />
     <ClCompile Include="CNewtonMethod.cpp" />
+    <ClCompile Include="COutput.cpp" />
+    <ClCompile Include="CPolyTerm.cpp" />
     <ClCompile Include="CPolynomial.cpp" />
     <ClCompile Include="CRootCalculator.cpp" />
     <ClCompile Include="CRootFindingAlgorithm.cpp" />
     <ClCompile Include="CSecantMethod.cpp" />
+    <ClCompile Include="CInputParser.cpp" />
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CFormatConverter.h" />
+    <ClInclude Include="COutput.h" />
+    <ClInclude Include="CPolyTerm.h" />
     <ClInclude Include="CFileManager.h" />
     <ClInclude Include="CInverseInterpolation.h" />
     <ClInclude Include="CNewtonMethod.h" />
@@ -151,9 +159,12 @@
     <ClInclude Include="CRootCalculator.h" />
     <ClInclude Include="CRootFindingAlgorithm.h" />
     <ClInclude Include="CSecantMethod.h" />
+    <ClInclude Include="CInputParser.h" />
     <ClInclude Include="MainWindow.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MethodType.h" />
+    <ClInclude Include="CResult.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
